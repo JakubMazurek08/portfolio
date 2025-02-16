@@ -3,19 +3,61 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --icon-count: 12;
+    --icon-size: 48px;
+    --icon-size-mobile: 32px;
+    --gap: 8px;
+    --time: 50s;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: #050505;
+}
+
+.mainGradient {
+    background: radial-gradient(61.55% 24.46% at 50% 100%, #1D1430 0%, #150F22 24.5%, #0E0B15 50.5%, #09080C 75%, #050505 100%);
+}
+
+@media (width > 40rem) {
+    .mainGradient {
+        background: radial-gradient(56.86% 71.3% at 50% 100%, #1B132C 0%, #130E1E 25%, #0D0A13 49.5%, #08070A 75%, #060607 100%);
+    }
+}
+
+.scrollUp {
+    animation: scrollUp var(--time) linear infinite;
+}
+
+@media (width < 40rem) {
+    .scrollUp {
+        animation: scrollUpMobile var(--time) linear infinite;
+    }
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(
+                calc(-1 * var(--icon-count) * var(--icon-size) + var(--gap) * 2)
+        );
+    }
+}
+
+@keyframes scrollUpMobile {
+    0% {
+        transform: translateX(
+                calc(-1 * var(--icon-count) * var(--icon-size) + var(--gap) * 2)
+        );
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.group:hover .scrollUp {
+    animation-play-state: paused;
 }

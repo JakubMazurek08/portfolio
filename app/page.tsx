@@ -1,101 +1,63 @@
-import Image from "next/image";
+import {Text} from "./ui/Text"
+import {Button} from "./ui/Button"
+import {TechStackDisplay} from "@/app/ui/TechStackDisplay";
+import {AnimatedText} from "@/app/ui/AnimatedText";
+import {ProjectCard} from "@/app/ui/ProjectCard";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    return (
+        <main className="mx-[20px] sm:max-w-[820px]">
+            <div className="w-full h-screen pt-[100px] sm:pt-[25vh]">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-[30px]">
+                    <div className="bg-darkGray rounded-[15px] w-[250px] h-[250px] sm:w-[300px] sm:h-[300px]">
+                    </div>
+                    <div className="flex flex-col flex-1 sm:w-[75%]">
+                        <Text>👋 Hello, I am</Text>
+                        <Text variant="h1">Jakub Mazurek</Text>
+                        <Text> Creative frontend developer from Lublin, Poland, specializing in <span
+                            className="text-accent">React</span> and <span className="text-accent">TypeScript</span>.
+                            Passionate about building sleek, interactive, and user-friendly digital experiences. </Text>
+                        <div className="flex flex-wrap justify-center sm:justify-start gap-4 mt-4 sm:mt-8">
+                            <Button>View My Work</Button>
+                            <Button>Email Me</Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+            <div className="my-[10vh] sm:my-[20vh]">
+                <div className="w-full sm:w-1/2">
+                    <Text variant="header">About Me</Text>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-16 relative">
+                    <div>
+                        <div className="flex flex-col gap-4 my-8">
+                            <Text>My journey into coding started when I was 12, experimenting with game development in
+                                Unity. What began as a curiosity quickly turned into a passion, and over time, I found
+                                myself drawn to the world of web development. </Text>
+                            <Text>Now, as a frontend developer specializing in React and TypeScript, I focus on building
+                                interactive, high-performance applications that deliver great user experiences.</Text>
+                            <Text>By day, I write clean, efficient code and collaborate on exciting projects. By night,
+                                I’m either working on personal builds, exploring new technologies, or hitting the gym to
+                                clear my mind.</Text>
+                            <Text>I’m always open to new opportunities, challenges, and connections—let’s build
+                                something amazing together!</Text>
+                        </div>
+                    </div>
+                    <TechStackDisplay/>
+                </div>
+            </div>
+
+            <div className=" absolute w-screen left-0 flex-col items-center gap-[30px] hidden lg:flex overflow-hidden">
+                <AnimatedText to='right'>I May Not Be The Best At Everything</AnimatedText>
+                <AnimatedText to='left'><span className="text-accent">But I Love Learning New Things</span></AnimatedText>
+                <AnimatedText to='right'>To Create Fun Stuff Like This</AnimatedText>
+            </div>
+
+            <div className="lg:mt-[600px]">
+                <Text variant='header'>My Projects</Text>
+                <ProjectCard title='Samson Wiki' text={'A web application designed to explore exercises for different muscle  groups, calculate calories, track and create workouts, and utilize tools like the  One Rep Max calculator. The project supports user login, enabling a  personalized experience.'} img='ryujin.png' icons={['react','typescript','tailwind','firebase']}/>
+            </div>
+        </main>
+    );
 }
