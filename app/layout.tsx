@@ -18,8 +18,6 @@ export default function RootLayout({
       <body
         className={"w-full flex flex-col items-center"}
       >
-      <div className="w-full h-screen absolute -z-50 mainGradient"></div>
-
       <div className="hidden fixed bottom-[10px] right-[10px] z-10 sm:flex flex-col gap-4">
           <Link href="https://github.com">
               <Icon name={"github"}/>

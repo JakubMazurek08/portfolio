@@ -1,4 +1,5 @@
 import {spaceGrotest, spaceGrotestBold} from "@/app/ui/fonts";
+import {AnimatedHeader} from "@/app/ui/AnimatedHeader";
 
 interface TextProps {
     children: React.ReactNode;
@@ -11,7 +12,7 @@ export const Text = ({children, variant}: TextProps) => {
     }else if (variant === 'button'){
         return <p className={`${spaceGrotest.className} text-[16px] sm:text-[20px] text-white`}>{children}</p>;
     }else if (variant === 'header'){
-        return <h1 className={`${spaceGrotestBold.className} text-[32px]/[50px] sm:text-[48px] text-white border-b-[2px] sm:border-b-[3px] border-accent`}>{children}</h1>;
+        return <AnimatedHeader> {children}</AnimatedHeader>;
     }else if (variant === 'special'){
         return <h1 className={`${spaceGrotestBold.className} text-[32px]/[50px] sm:text-[48px] text-white sm:[writing-mode:vertical-rl]`}>{children}</h1>;
     }else if (variant === 'special2'){
