@@ -24,7 +24,7 @@ export const TechStackDisplay= () => {
 
     useEffect(()=>{
         setIcons([...iconsList, ...iconsList]);
-    }, [iconsList]);
+    }, []);
 
     return (
         <div className="flex flex-col sm:flex-row-reverse sm:gap-4">

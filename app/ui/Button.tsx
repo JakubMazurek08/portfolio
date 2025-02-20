@@ -1,4 +1,5 @@
 import {Text} from "./Text";
+import React from "react";
 
 interface ButtonProps {
     children: React.ReactNode;

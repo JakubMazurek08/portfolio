@@ -1,5 +1,4 @@
 import {Text} from "./ui/Text"
-import {Button} from "./ui/Button"
 import {TechStackDisplay} from "@/app/ui/TechStackDisplay";
 import {AnimatedText} from "@/app/ui/AnimatedText";
 import {ProjectCard} from "@/app/ui/ProjectCard";

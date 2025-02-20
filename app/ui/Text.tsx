@@ -1,5 +1,6 @@
 import {spaceGrotest, spaceGrotestBold} from "@/app/ui/fonts";
 import {AnimatedHeader} from "@/app/ui/AnimatedHeader";
+import React from "react";
 
 interface TextProps {
     children: React.ReactNode;

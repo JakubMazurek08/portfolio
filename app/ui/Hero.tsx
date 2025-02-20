@@ -3,7 +3,6 @@
 import {Text} from "@/app/ui/Text";
 import {Button} from "@/app/ui/Button";
 import {gsap} from "gsap"
-import {Bounce} from "gsap/gsap-core";
 import {useEffect} from "react";
 import {TextPlugin} from "gsap/TextPlugin"
 import {spaceGrotestBold} from "@/app/ui/fonts";

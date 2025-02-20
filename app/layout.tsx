@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {Icon} from "./ui/SvgIcons";
 import "./globals.css";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Jakub Mazurek",

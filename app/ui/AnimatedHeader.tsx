@@ -4,7 +4,7 @@ import { spaceGrotestBold } from "@/app/ui/fonts";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
