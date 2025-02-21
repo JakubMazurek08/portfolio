@@ -1,43 +1,18 @@
 import {Text} from "./ui/Text"
-import {TechStackDisplay} from "@/app/ui/TechStackDisplay";
 import {AnimatedText} from "@/app/ui/AnimatedText";
 import {ProjectCard} from "@/app/ui/ProjectCard";
 import {Hero} from "@/app/ui/Hero";
+import {ContactForm} from "@/app/ui/ContactForm";
+import {AboutMe} from "@/app/ui/AboutMe";
+
 
 export default function Home() {
     return (
         <>
             <div className="w-full h-screen absolute -z-50 mainGradient"></div>
             <main className="mx-[20px] sm:max-w-[820px]">
-
                 <Hero/>
-                <div className="my-[10vh] sm:my-[20vh]">
-                    <Text variant="header">About Me</Text>
-                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-16 relative">
-                        <div>
-                            <div className="flex flex-col gap-4 my-8">
-                                <Text>My journey into coding started when I was 12, experimenting with game development
-                                    in
-                                    Unity. What began as a curiosity quickly turned into a passion, and over time, I
-                                    found
-                                    myself drawn to the world of web development. </Text>
-                                <Text>Now, as a frontend developer specializing in React and TypeScript, I focus on
-                                    building
-                                    interactive, high-performance applications that deliver great user
-                                    experiences.</Text>
-                                <Text>By day, I write clean, efficient code and collaborate on exciting projects. By
-                                    night,
-                                    I’m either working on personal builds, exploring new technologies, or hitting the
-                                    gym to
-                                    clear my mind.</Text>
-                                <Text>I’m always open to new opportunities, challenges, and connections—let’s build
-                                    something amazing together!</Text>
-                            </div>
-                        </div>
-                        <TechStackDisplay/>
-                    </div>
-                </div>
-
+                <AboutMe/>
                 <div
                     className=" absolute w-screen left-0 flex-col items-center gap-[30px] hidden lg:flex overflow-hidden">
                     <AnimatedText to='right'>I May Not Be The Best At Everything</AnimatedText>
@@ -63,6 +38,18 @@ export default function Home() {
                                  img="szogun.png"
                                  icons={['html', 'css', 'javascript']}/>
                 </div>
+                <Text variant='header'>Get In Touch</Text>
+                <div
+                    className="p-4 sm:p-8 my-4 sm:my-8 rounded-[5px] sm:rounded-[20px] bg-darkGray flex flex-col gap-2">
+                    <Text>Mail me at</Text>
+                    <Text variant='special3'>jakubmazurek08@gmail.com</Text>
+                    <Text>Feel free to contact me with any inquires or questions!</Text>
+                </div>
+                <ContactForm/>
+
+                <footer className="w-full pl-10 py-4 border border-t-gray">
+                    <Text>© 2025 Mazurek. All rights reserved.</Text>
+                </footer>
             </main>
         </>
     );

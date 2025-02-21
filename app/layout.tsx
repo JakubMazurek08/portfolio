@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={"w-full flex flex-col items-center"}
+        className={"w-full overflow-x-hidden flex flex-col items-center"}
       >
       <div className="hidden fixed bottom-[10px] right-[10px] z-10 sm:flex flex-col gap-4">
           <Link href="https://github.com">
