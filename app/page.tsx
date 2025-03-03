@@ -21,7 +21,7 @@ export default function Home() {
                     <AnimatedText to='right'>To Create Fun Stuff Like This</AnimatedText>
                 </div>
 
-                <div id='projects' className="lg:mt-[600px] pt-16 mb-[20vh]">
+                <div id='projects' className="lg:mt-[60vh] pt-16 mb-[20vh]">
                     <Text variant='header'>My Projects</Text>
                     <ProjectCard title='Samson Wiki'
                                  text={'A web application designed to explore exercises for different muscle  groups,' +
