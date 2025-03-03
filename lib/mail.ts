@@ -4,12 +4,10 @@ import nodemailer from "nodemailer";
 
 export async function sendMail({
        to,
-       name,
        subject,
        body,
    }: {
     to: string;
-    name: string;
     subject: string;
     body: string;
 }) {

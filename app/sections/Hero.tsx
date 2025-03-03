@@ -36,8 +36,8 @@ export const Hero = () => {
                             className="text-accent">React</span> and <span className="text-accent">TypeScript</span>.
                             Passionate about building sleek, interactive, and user-friendly digital experiences. </Text></div>
                         <div className="main flex flex-wrap justify-center sm:justify-start gap-4 mt-4 sm:mt-8">
-                            <a href='#projects'><Button>View My Work</Button></a>
-                            <a href='#contact'><Button>Contact Me</Button></a>
+                            <a href={'#projects'}><Button>View My Work</Button></a>
+                            <a href={'#contact'}><Button>Contact Me</Button></a>
                         </div>
                     </div>
                 </div>
