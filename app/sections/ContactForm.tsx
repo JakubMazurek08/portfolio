@@ -31,7 +31,6 @@ export const ContactForm = () => {
     const submit = async (data: FormData) => {
         const result = await sendMail({
             to: "jakubmazurek08@gmail.com",
-            name: data.fullName,
             subject: "Contact Form Submission",
             body: `<h1>${data.fullName} (${data.email})</h1><p>${data.message}</p>`,
         });
