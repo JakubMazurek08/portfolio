@@ -20,7 +20,7 @@ export default function RootLayout({
             className={"w-full overflow-x-hidden flex flex-col items-center"}
         >
         <div className="hidden fixed bottom-[10px] right-[10px] z-10 sm:flex flex-col gap-4">
-            <Link href="https://github.com/Dragon30312" passHref legacyBehavior>
+            <Link href="https://github.com/JakubMazurek08" passHref legacyBehavior>
                 <a target="_blank">
                     <Icon name={"github"}/>
                 </a>
