@@ -1,6 +1,5 @@
 import {Text} from "./ui/Text"
 import {AnimatedText} from "@/app/ui/AnimatedText";
-import {ProjectCard} from "@/app/ui/ProjectCard";
 import {Hero} from "@/app/sections/Hero";
 import {ContactForm} from "@/app/sections/ContactForm";
 import {AboutMe} from "@/app/sections/AboutMe";

@@ -1,6 +1,5 @@
 import {Text} from "@/app/ui/Text";
 import {Icon} from "@/app/ui/SvgIcons";
-import {ProjectCard} from "@/app/ui/ProjectCard";
 import Image from "next/image";
 import Link from "next/link";
 import {Button} from "@/app/ui/Button";

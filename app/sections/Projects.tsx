@@ -4,7 +4,6 @@ import { ProjectCard } from "@/app/ui/ProjectCard";
 import { useState } from "react";
 import clsx from "clsx";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import {Button} from "@/app/ui/Button";
 
 export const Projects = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
