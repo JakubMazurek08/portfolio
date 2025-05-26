@@ -20,7 +20,7 @@ export const ProjectCard = ({title, text, img, icons, url} : ProjectCardProps) =
             <div className={'min-h-[125px]'}><Text>{text}</Text></div>
 
             <div className='flex flex-col items-center'><Image className={"rounded-[10px] my-4 sm:w-auto sm:h-auto sm:object-fill object-cover h-[200px] w-[320px]"} width={1000} height={0} src={`/${img}`} alt={"project image"}/></div>
-            <div className="flex justify-between">
+            <div className="flex justify-between flex-col sm:flex-row">
                 <div className="flex gap-2">
                     {icons.map((icon, index) => (<Icon key={index} name={icon}/>))}
                 </div>

@@ -62,7 +62,7 @@ export const Projects = () => {
         <div id='projects' className="lg:mt-[60vh] pt-16 mb-[20vh] relative overflow-visible">
             <Text variant='header'>My Projects</Text>
 
-            <div className="relative h-[60vh] sm:h-[100vh] mt-8">
+            <div className="relative h-[100vh] mt-8">
                 {getVisibleProjects().map((project) => {
                     const { offset } = project;
 
@@ -102,7 +102,7 @@ export const Projects = () => {
                             onClick={prev}
                             className="bg-white text-black rounded-full p-1 sm:p-2 shadow pointer-events-auto"
                         >
-                            <ChevronLeft className="sm:size-10 "/>
+                            <ChevronLeft className="sm:size-10 size-6"/>
                         </button>
                     </a>
                     <a href={'#cards'}>
@@ -110,7 +110,7 @@ export const Projects = () => {
                             onClick={next}
                             className="bg-white text-black rounded-full p-1 sm:p-2 shadow pointer-events-auto"
                         >
-                            <ChevronRight className="sm:size-10"/>
+                            <ChevronRight className="sm:size-10 size-6"/>
                         </button>
                     </a>
                 </div>
