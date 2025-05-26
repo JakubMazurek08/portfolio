@@ -8,7 +8,7 @@ import React from "react";
 export const InProgress = () => {
     return <div className="my-[10vh] sm:my-[20vh]">
         <Text variant="header">Currently...</Text>
-        <div className=" mt-10">
+        <div className="mt-10">
             <div className="flex items-center gap-3 mb-3 text-xl sm:text-2xl font-semibold text-white">
                 <Icon name={'rust'}/>
                 <Text variant={'h1'}>Learning Rust</Text>
