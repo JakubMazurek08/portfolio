@@ -14,7 +14,7 @@ export const Button = ({ children, variant, onClick}: ButtonProps) => {
     if (variant === "secondary") {
         return (
             <button onClick={onClick} className={`${baseClasses} border border-accent`}>
-                <Text variant="button">{children}</Text>
+                <Text variant="button"><span className={'text-white'}>{children}</span></Text>
             </button>
         );
     } else if (variant === "submit") {

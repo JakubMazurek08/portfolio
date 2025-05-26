@@ -28,8 +28,8 @@ export const Hero = () => {
     return (
         <>
             <div className="w-full h-screen pt-[100px] sm:pt-[25vh]">
-                <div className="flex flex-col sm:flex-row sm:items-center gap-[30px]">
-                    <Image className="main bg-darkGray rounded-[15px] w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] object-cover grayscale-[50%] " width={1000} height={1000} src={`/photo.png`} alt="My Photo" />
+                <div className="flex flex-col sm:flex-row items-center gap-[30px]">
+                    <Image className="main bg-darkGray rounded-[15px] h-[300px] sm:size-[300px] object-cover grayscale-[50%] " width={1000} height={1000} src={`/photo.png`} alt="My Photo" />
                     <div className="flex flex-col flex-1 sm:w-[75%]">
                         <div className="main"><Text>👋 Hello, I am</Text></div>
                         <div className={`${spaceGrotestBold.className} mainText text-[32px]/[55px] sm:text-[48px] text-white`}>Jakub Mazurek</div>

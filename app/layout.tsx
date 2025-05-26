@@ -19,7 +19,7 @@ export default function RootLayout({
         <body
             className={"w-full overflow-x-hidden flex flex-col items-center"}
         >
-        <div className="hidden fixed bottom-[10px] right-[10px] z-10 sm:flex flex-col gap-4">
+        <div className="hidden fixed bottom-[10px] right-[10px] z-50 sm:flex flex-col gap-4">
             <Link href="https://github.com/JakubMazurek08" passHref legacyBehavior>
                 <a target="_blank">
                     <Icon name={"github"}/>
