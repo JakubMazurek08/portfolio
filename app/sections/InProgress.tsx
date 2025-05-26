@@ -31,7 +31,7 @@ export const InProgress = () => {
                 className={"rounded-[10px] my-4 sm:w-auto sm:h-auto sm:object-fill object-cover h-[200px] w-[320px]"}
                 width={1000} height={0} src={`/gradesync.png`} alt={"project image"}/></div>
 
-            <div className="flex justify-between flex-col sm:flex-row">
+            <div className="flex justify-between flex-col sm:flex-row gap-4">
                 <div className="flex gap-2">
                     <Icon name={'react'}/>
                     <Icon name={'typescript'}/>

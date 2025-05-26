@@ -27,7 +27,7 @@ export const Hero = () => {
     }, []);
     return (
         <>
-            <div className="w-full min-h-screen pt-[50px] sm:pt-[25vh]">
+            <div className="w-full sm:min-h-screen pt-[50px] sm:pt-[25vh]">
                 <div className="flex flex-col sm:flex-row items-center gap-[30px]">
                     <Image className="main bg-darkGray rounded-[15px] h-[300px] sm:size-[300px] object-cover grayscale-[50%] " width={1000} height={1000} src={`/photo.png`} alt="My Photo" />
                     <div className="flex flex-col flex-1 sm:w-[75%]">
