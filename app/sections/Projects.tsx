@@ -59,10 +59,10 @@ export const Projects = () => {
     };
 
     return (
-        <div id='projects' className="lg:mt-[60vh] pt-16 mb-[20vh] relative overflow-visible">
+        <div id='projects' className="lg:mt-[60vh] pt-8 sm:pt-16 mb-[20vh] relative overflow-visible">
             <Text variant='header'>My Projects</Text>
 
-            <div className="relative h-[100vh] mt-8">
+            <div className="relative h-[700px] sm:h-[900px] mt-8">
                 {getVisibleProjects().map((project) => {
                     const { offset } = project;
 
