@@ -14,9 +14,9 @@ export const InProgress = () => {
                 <Text variant={'h1'}>Learning Rust</Text>
             </div>
             <Text>
-                I'm diving into <span className="text-accent">Rust</span> to deepen my understanding of systems
+                I&#39;m diving into <span className="text-accent">Rust</span> to deepen my understanding of systems
                 programming and memory-safe concurrency.
-                It’s a refreshing challenge compared to the JavaScript ecosystem I’m used to.
+                It&rsquo;s a refreshing challenge compared to the JavaScript ecosystem I&#39;m used to.
             </Text>
         </div>
 
