@@ -1,7 +1,7 @@
 'use client'
 import { Text } from "@/app/ui/Text";
 import { ProjectCard } from "@/app/ui/ProjectCard";
-import { useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import clsx from "clsx";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -9,6 +9,20 @@ export const Projects = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const projects = [
+        {
+            title: 'IntervYou',
+            text: "Built in just 24 hours at TechniCodeCamp Hackathon, our winning project - IntervYou is an AI-powered interview preparation platform that helps job seekers practice interviews, get instant feedback, and improve their skills through personalized flashcards and learning roadmaps..",
+            img: 'intervyou.png',
+            icons: ['react', 'typescript', 'python', 'tailwind','firebase'],
+            url: 'https://github.com/JakubMazurek08/IntervYou'
+        },
+        {
+            title: 'Scoopaholic',
+            text: "Scoopaholic is a sleek, vibrant landing page for an ice cream shop. Its main feature is an interactive drag-and-drop builder where users create custom cones by combining flavors. It includes full CRUD admin panels and sends a confirmation email when an order is placed.",
+            img: 'scoopaholic.png',
+            icons: ['react', 'typescript', 'python', 'tailwind'],
+            url: 'https://github.com/technischools-lublin/Scoopaholic'
+        },
         {
             title: 'Samson Wiki',
             text: 'A web application designed to explore exercises for different muscle groups, calculate calories, track and create workouts, and utilize tools like the One Rep Max calculator. The project supports user login, enabling a personalized experience.',
@@ -23,20 +37,6 @@ export const Projects = () => {
             icons: ['html', 'css', 'javascript'],
             url: 'https://ryujin-eji0.onrender.com/'
         },
-        {
-            title: 'Scoopaholic',
-            text: "Scoopaholic is a sleek, vibrant landing page for an ice cream shop. Its main feature is an interactive drag-and-drop builder where users create custom cones by combining flavors. It includes full CRUD admin panels and sends a confirmation email when an order is placed.",
-            img: 'scoopaholic.png',
-            icons: ['react', 'typescript', 'python', 'tailwind'],
-            url: 'https://github.com/technischools-lublin/Scoopaholic'
-        },
-        {
-            title: 'IntervYou',
-            text: "Built in just 24 hours at TechniCodeCamp Hackathon, our winning project - IntervYou is an AI-powered interview preparation platform that helps job seekers practice interviews, get instant feedback, and improve their skills through personalized flashcards and learning roadmaps..",
-            img: 'intervyou.png',
-            icons: ['react', 'typescript', 'python', 'tailwind','firebase'],
-            url: 'https://github.com/JakubMazurek08/IntervYou'
-        }
     ];
 
     const next = () => setCurrentIndex(prev => prev + 1);
@@ -58,12 +58,20 @@ export const Projects = () => {
         return visibleProjects;
     };
 
+    const textRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const [maxHeight, setMaxHeight] = useState<number>(0);
+
+    useEffect(() => {
+        const heights = textRefs.current.map(ref => ref?.offsetHeight || 0);
+        setMaxHeight(Math.max(...heights));
+    }, []);
+
     return (
-        <div id='projects' className="lg:mt-[60vh] pt-4 sm:pt-16 mb-[100px] sm:mb-[20vh] relative overflow-visible">
+        <div id='projects' className="lg:mt-[60vh] sm:pt-16 mb-[100px] sm:mb-[20vh] relative overflow-visible">
             <Text variant='header'>My Projects</Text>
 
-            <div className="relative h-[700px] sm:h-[900px] mt-4 sm:mt-8">
-                {getVisibleProjects().map((project) => {
+            <div className="relative h-[700px] sm:h-[900px] sm:mt-8">
+                {getVisibleProjects().map((project, index) => {
                     const { offset } = project;
 
                     return (
@@ -90,6 +98,8 @@ export const Projects = () => {
                                 img={project.img}
                                 icons={project.icons}
                                 url={project.url}
+                                textHeight={maxHeight}
+                                textRef={(el: HTMLDivElement | null) => textRefs.current[index] = el}
                             />
                         </div>
                     );

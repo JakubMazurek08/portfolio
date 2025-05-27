@@ -10,7 +10,7 @@ import {InProgress} from "@/app/sections/InProgress";
 export default function Home() {
     return (
         <>
-            <div className="w-full h-screen hidden sm:absolute -z-50 mainGradient"></div>
+            <div className="w-full h-screen hidden sm:block absolute -z-50 mainGradient"></div>
             <main className="mx-[20px] sm:max-w-[820px]">
                 <Hero/>
                 <AboutMe/>
