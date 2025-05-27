@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {Button} from "@/app/ui/Button";
 import {Icon} from "./SvgIcons";
+import {RefObject} from "react";
 
 interface ProjectCardProps {
     title: string;
@@ -11,7 +12,7 @@ interface ProjectCardProps {
     icons: string[];
     url: string;
     textHeight?: number;
-    textRef?: any;
+    textRef?: RefObject<HTMLDivElement> | ((el: HTMLDivElement | null) => void);
 }
 
 export const ProjectCard = ({ title, text, img, icons, url, textHeight, textRef }: ProjectCardProps) => {
